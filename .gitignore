@@ -1,0 +1,6 @@
+
+out/
+*.class
+sources.txt
+data/*.tsv
+.DS_Store

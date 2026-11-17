@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="header">
+        <div class="logo">SRMS</div>
+        <div>
+            <h1>Student Result Management System</h1>
+            <p>Manage students and academic results easily</p>
+        </div>
+    </header>
+
+    <nav class="navbar">
+        <button class="nav-btn active" data-page="dashboard">Dashboard</button>
+        <button class="nav-btn" data-page="students">All Students</button>
+        <button class="nav-btn" data-page="addStudent">Add Student</button>
+    </nav>
+
+    <main class="container">
+
+        <!-- Dashboard -->
+        <section id="dashboard" class="page active">
+            <h2>Dashboard</h2>
+            <p>Welcome to Student Result Management System</p>
+
+            <div class="stats">
+                <div class="stat-card">
+                    <h3>Total Students</h3>
+                    <p id="totalStudents">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Passed Students</h3>
+                    <p id="passedStudents">0</p>
+                </div>
+
+                <div class="stat-card">
+                    <h3>Failed Students</h3>
+                    <p id="failedStudents">0</p>
+                </div>
+            </div>
+
+            <h2>Recent Students</h2>
+            <div id="recentStudents"></div>
+        </section>
+
+        <!-- All Students -->
+        <section id="students" class="page">
+            <h2>All Students</h2>
+
+            <input type="text" id="searchInput" placeholder="Search by name or roll number">
+
+            <div id="studentsList"></div>
+        </section>
+
+        <!-- Add Student -->
+        <section id="addStudent" class="page">
+            <h2>Add New Student</h2>
+
+            <form id="studentForm">
+
+                <label>Student Name</label>
+                <input type="text" name="name" required>
+
+                <label>Roll Number</label>
+                <input type="text" name="rollNumber" required>
+
+                <label>Department</label>
+                <input type="text" name="department" value="CSE" required>
+
+                <label>Semester</label>
+                <input type="text" name="semester" placeholder="Example: 5th Semester" required>
+
+                <h3>Enter Subject Marks (Out of 100)</h3>
+
+                <label>Mathematics</label>
+                <input type="number" name="mark0" min="0" max="100" required>
+
+                <label>Data Structures</label>
+                <input type="number" name="mark1" min="0" max="100" required>
+
+                <label>OOPS</label>
+                <input type="number" name="mark2" min="0" max="100" required>
+
+                <label>DBMS</label>
+                <input type="number" name="mark3" min="0" max="100" required>
+
+                <label>Operating Systems</label>
+                <input type="number" name="mark4" min="0" max="100" required>
+
+                <button type="submit" class="submit-btn">
+                    Save Student Result
+                </button>
+
+            </form>
+
+            <p id="formMessage"></p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Student Result Management System | Java OOPS Project</p>
+        <p>Developed by B.Tech CSE Students</p>
+    </footer>
+
+    <script src="app.js"></script>
+
+</body>
+
+</html>
